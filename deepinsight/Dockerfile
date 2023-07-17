@@ -7,7 +7,7 @@ RUN wget -P /root/.insightface/models https://huggingface.co/deepinsight/inswapp
 RUN wget -P /root/.insightface/models https://github.com/deepinsight/insightface/releases/download/v0.7/buffalo_l.zip
 RUN unzip /root/.insightface/models/buffalo_l.zip -d /root/.insightface/models/buffalo_l
 RUN pip install onnxruntime
-COPY entrypoint/entrypoint.py /app/main.py
+COPY entrypoint/entrypoint.py main.py
 
 
 ENTRYPOINT ["python", "main.py"]
